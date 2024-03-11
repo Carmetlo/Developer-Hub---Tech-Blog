@@ -37,3 +37,6 @@ Comment.init(
         underscored: true,
         modelName: 'comment',
     }
+)
+
+export default Comment;
