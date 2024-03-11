@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.1",
+    "casual": "^1.6.2",
     "connect-session-sequelize": "^7.1.7",
     "dotenv": "^16.4.5",
     "exphbs": "^1.2.0",
