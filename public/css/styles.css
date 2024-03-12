@@ -1,0 +1,28 @@
+body {
+    margin: 50px;
+    font-family: Arial, sans-serif; /* Use a common sans-serif font for readability */
+    background-color: #f0f5f9; /* Light blue background color */
+}
+
+.form-input {
+    border-radius: 5px;
+    border: 2px solid #3498db; /* Blue border */
+    padding: 8px 12px; /* Add padding for better input field appearance */
+    font-size: 16px; /* Increase font size for better readability */
+}
+
+#banner {
+    border: 2px solid #3498db; /* Blue border */
+    border-radius: 10px;
+    text-align: center;
+    background-color: #f0f5f9; /* Light blue background color */
+    padding: 20px; /* Add padding for better content spacing */
+}
+
+h2 {
+    color: #3498db; /* Blue heading color */
+}
+
+label {
+    color: #3498db; /* Blue label color */
+}
