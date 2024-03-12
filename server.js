@@ -13,9 +13,9 @@ const app = express();
 const PORT = process.env.PORT || 3001
 
 const sess = {
-    secret: 'super secret secret',
+    secret: 'Keep it secret, keep it safe.',
     cookie: {
-        maxAge: 1000,
+        maxAge: 1000 * 60 * 60 * 2,
     },
     resave: false,
     saveUninitialized: true,
