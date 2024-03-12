@@ -1,33 +1,34 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Tech Blog</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Document</title>
 </head>
 <body id="body" class="m-4">
-    <header class="header">
-        <h1 class="header-title">
-            <span role="img" aria-label="money">💸</span>
-            <a href="/">Tech Blog!</a>
-        </h1>
-        <nav class="header-nav">
-            {{#if logged_in}}
-                <a href="/dashboard">Profile</a>
-                <button class="no-button" id="logout">Logout</button>
-            {{else}}
-                <a href="/login">Login</a>
-            {{/if}}
-            <a href="/">Homepage</a>
-        </nav>
+    <header class="display-flex justify-space-between align-center p-2">
+      <h1>
+        <span role="img" aria-label="money">💸</span>
+        <a href="/">Tech Blog!</a>
+      </h1>
+      <nav>
+        {{#if logged_in}}
+        <a href="/dashboard">profile</a> 
+        <button class="no-button" id="logout">logout</button>
+        <a href="/">Homepage</a>
+        {{else}}
+        <a href="/login">Login</a>
+        <a href="/">Homepage</a>
+        {{/if}}
+      </nav>
     </header>
-    
     {{{body}}}
-    
-    {{#if logged_in}}
-        <script src="/client-scripts/logout.js"></script>
-    {{/if}}
+      {{#if logged_in}}
+  <script src="/client-scripts/logout.js"></script>
+  {{/if}}
 </body>
 </html>

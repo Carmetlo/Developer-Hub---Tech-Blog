@@ -1,1 +1,1 @@
-import format_date from '../../utils/helpers.js';
+import format_date from '../../utils/helpers';
