@@ -75,7 +75,7 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 })
 
-router.get('/editpost/:id', withAuth async (req, res) => {
+router.get('/editpost/:id', withAuth, async (req, res) => {
   try {
       const postData = await Post.findByPk(req.params.id, {
       include: [
