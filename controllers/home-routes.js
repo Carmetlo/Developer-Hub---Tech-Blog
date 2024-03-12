@@ -66,3 +66,33 @@ router.get('/login', (req, res) => {
     }
     res.render('login');
 })
+
+router.get('/signup', (req, res) => {
+    if (req.session.loggedIn) {
+        res.redirect('/dashboard');
+        return;
+    }
+    res.render('signup');
+})
+
+router.get('/editpost/:id', withAuth async (req, res) => {
+  try {
+      const postData = await Post.findByPk(req.params.id, {
+      include: [
+      { model: User, attributes: ['name'],
+      },
+      { model: Comment, include: [{ model: User, attributes: ['name'] }] },
+      ],
+      });
+      const post = postData.get({ plain: true });
+      res.render('edit-post', {
+          post,
+          loggedIn: req.session.loggedIn
+      })
+  } catch (err) {
+      console.log(err);
+      res.status(500).json(err);
+  }
+})
+
+export default router;
