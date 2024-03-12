@@ -1,0 +1,27 @@
+<main class="container mt-5">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="mb-4">Dashboard</h1>
+       <form class="form" id="new-post" data-post-id="{{id}}">
+         <div class="form-group">
+          <label>Post Title</label>
+        <input type="text" id="title">
+        <label for="post">Tell us your thoughts!</label>
+        <textarea class="form-input" type="text" id="post" name="post"></textarea>
+        <button type="submit" id="post-btn">Post</button>
+    </div>
+  </div>
+  <br>
+  <h1 class="mb-4">Javascript Frameworks Library Contributions:</h1>
+  {{#each posts as |post|}}
+    <div class="post-container post mb-3">
+      <h2><a href="/post/{{id}}" class="text-decoration-none text-reset">{{title}}</a></h2>
+      <p>Created by: {{user.name}} | Date: {{createdAt}}</p>
+      <a href="/editpost/{{id}}" class="btn btn-warning">Edit Post</a>
+      <button class="btn btn-danger delete-post" data-post-id="{{id}}">Delete</button>
+    </div>
+  {{/each}}
+</main>
+
+<script src="../js/new-post.js"></script>
+<script src="../js/delete.js"></script>
