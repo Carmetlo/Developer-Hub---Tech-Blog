@@ -1,4 +1,4 @@
-const casual = require('casual');
+import casual from 'casual';
 
 const numberOfComments = 7;
 

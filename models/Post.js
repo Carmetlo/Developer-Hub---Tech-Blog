@@ -1,6 +1,7 @@
+import sequelize from '../config/connection.js'
 import { Model, DataTypes } from 'sequelize'
 
-import sequelize from '../config/connection'
+
 class Post extends Model {}
 
 Post.init(
