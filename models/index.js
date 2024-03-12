@@ -1,6 +1,6 @@
-import Post from './Post';
-import User from './User';
-import Comment from './Comment';
+import Post from './Post.js';
+import User from './User.js';
+import Comment from './Comment.js';
 
 Post.belongsTo(User, {
     foreignKey: 'user_id',

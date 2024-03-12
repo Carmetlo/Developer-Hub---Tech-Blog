@@ -1,6 +1,6 @@
 import express from 'express';
-import { Comment } from '../../models/index';
-import withAuth from '../../utils/withAuth';
+import { Comment } from '../../models/index.js';
+import withAuth from '../../utils/withAuth.js';
 const router = express.Router();
 
 router.post('/', withAuth, async (req, res) => {
